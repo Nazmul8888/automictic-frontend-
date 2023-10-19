@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
+
+  const [loadedData, setLoadedData] = useState([]);
+
+  useEffect(() => {
+    const dataFromLocalStorage = JSON.parse(localStorage.getItem('items'));
+
+    if (dataFromLocalStorage) {
+      setLoadedData(dataFromLocalStorage);
+    }
+
+  }, []);
+
+
     const navLink = <>
 
 <li><NavLink to='/'>Home</NavLink></li>
@@ -28,9 +42,7 @@ const NavBar = () => {
             {navLink}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-        </div>
+        
       </div>
     );
 };

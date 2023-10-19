@@ -12,6 +12,7 @@ import Login from './components/NavBar/Login/Login';
 import Register from './components/NavBar/Register/Register';
 import AuthProvider from './Router/AuthProvider';
 import Cart from './components/NavBar/Cart/Cart';
+import DetailsCart from './components/DetailsCart/DetailsCart';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
         path: '/cart',
         element: <Cart></Cart>
       },
+      {
+        path: '/product/:details',
+        element:<DetailsCart></DetailsCart>,
+        loader: ()=> fetch('data.json')
+        
+      }
     ]
   },
 ]);
