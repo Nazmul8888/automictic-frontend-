@@ -67,7 +67,7 @@ const Home = () => {
         
 
 
-          {news.map((item, index) => (
+          {news?.map((item, index) => (
             <div className="user" key={index}>
 
 
