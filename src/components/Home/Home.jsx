@@ -10,7 +10,7 @@ const Home = () => {
 
       <>
 
-        <div className="grid grid-cols-3  gap-4 ml-10 ">
+        <div className="grid grid-cols-3  gap-4 ml-20 ">
           {news.map((item, index) => (
             <div className="user" key={index}>
               <div className="card card-compact w-96 bg-base-100 shadow-xl">
