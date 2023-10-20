@@ -84,7 +84,7 @@ const Home = () => {
                     <p >{item.description_short}</p>
                     <p className="text-xl font-semibold">{item.type}</p>
                     <p>{item.price}</p>
-                    
+
                     <div className="card-actions ">
                       <button className="btn btn-primary" onClick={(e) => buy(e, item)}>Add to cart</button>
                     </div>

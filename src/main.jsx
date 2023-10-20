@@ -14,6 +14,8 @@ import AuthProvider from './Router/AuthProvider';
 import Cart from './components/NavBar/Cart/Cart';
 import DetailsCart from './components/DetailsCart/DetailsCart';
 import PrivateRoute from './Router/PrivateRoute';
+import AddProduct from './components/AddProduct/AddProduct';
+import Product from './components/Product/Product';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>,
+        element: <PrivateRoute><Home></Home></PrivateRoute>,
         loader: () => fetch('/data.json')
       },
       {
@@ -38,9 +40,18 @@ const router = createBrowserRouter([
       },
       {
         path: '/product/:details',
-        element: <PrivateRoute><DetailsCart></DetailsCart></PrivateRoute>,
+        element: <DetailsCart></DetailsCart>,
         loader: () => fetch('data.json')
 
+      },
+      {
+        path: '/addProduct',
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path: '/product',
+        element: <Product></Product>,
+        loader: ()=> fetch('http://localhost:5000/product')
       }
     ]
   },
