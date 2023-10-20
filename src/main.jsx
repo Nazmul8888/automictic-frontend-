@@ -13,6 +13,7 @@ import Register from './components/NavBar/Register/Register';
 import AuthProvider from './Router/AuthProvider';
 import Cart from './components/NavBar/Cart/Cart';
 import DetailsCart from './components/DetailsCart/DetailsCart';
+import PrivateRoute from './Router/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('/data.json')
+        loader: () => fetch('/data.json')
       },
       {
         path: '/login',
@@ -37,9 +38,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/product/:details',
-        element:<DetailsCart></DetailsCart>,
-        loader: ()=> fetch('data.json')
-        
+        element: <PrivateRoute><DetailsCart></DetailsCart></PrivateRoute>,
+        loader: () => fetch('data.json')
+
       }
     ]
   },
@@ -47,8 +48,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <AuthProvider>
-   <RouterProvider router={router} />
-   </AuthProvider>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
