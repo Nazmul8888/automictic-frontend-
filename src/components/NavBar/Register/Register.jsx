@@ -32,7 +32,7 @@ const Register = () => {
     return (
         <div className="bg-[#FFA07A]">
             <div >
-            <h2 className=" text-3xl my-10 text-center">Please Register</h2>
+            <h2 className=" text-3xl my-10 text-center font-bold">Please <span className="text-red">Register</span></h2>
                     
                         <form onSubmit={handelRegister} className="md:w-3/4 lg:w-1/2 mx-auto">
                             <div className="form-control">

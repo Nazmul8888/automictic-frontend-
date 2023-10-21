@@ -4,6 +4,8 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 
 
+
+
 const MainLayout = () => {
     return (
         <div>
@@ -11,6 +13,7 @@ const MainLayout = () => {
             
             
            <Outlet></Outlet>
+           {/* <MiddelSection></MiddelSection> */}
            <Footer></Footer>
         </div>
     );

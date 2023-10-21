@@ -10,10 +10,8 @@ const ProductCard = ({brand}) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{brand_name}</h2>
                 <h3 className="card-title">{name}</h3>
-                <h3 className="card-title">{type}</h3>
+                <h2 className="card-title">{type}</h2>
                <p>{description_short}</p>
-                
-                
                 <div className="card-actions">
                     <button className="btn btn-primary">Buy Now</button>
                 </div>

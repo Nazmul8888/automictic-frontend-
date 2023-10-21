@@ -10,7 +10,7 @@ const handelCoffee = e => {
     const description_short = e.target.description_short.value;
     const type = e.target.type.value;
     const price = e.target.price.value;
-    const image = e.target.photo.value;
+    const image = e.target.image.value;
 
     const newProduct = { brand_name, description_short, type, name, price,  image }
     console.log(newProduct);
@@ -51,16 +51,16 @@ const AddProduct = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Product Name</span>
+                            <span className="label-text font-bold">Product Name</span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="name" placeholder="Coffee Name" className="input input-bordered w-full" />
+                            <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Brand_name </span>
+                            <span className="label-text font-bold">Brand_name </span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
@@ -72,7 +72,7 @@ const AddProduct = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Description_short</span>
+                            <span className="label-text font-bold">Description_short</span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
@@ -81,7 +81,7 @@ const AddProduct = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Price </span>
+                            <span className="label-text font-bold">Price </span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
@@ -93,7 +93,7 @@ const AddProduct = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Type</span>
+                            <span className="label-text font-bold">Type</span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
@@ -105,7 +105,7 @@ const AddProduct = () => {
                 <div >
                     <div className="form-control w-full mb-8">
                         <label className="label">
-                            <span className="label-text">image URL</span>
+                            <span className="label-text font-bold">image URL</span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
@@ -116,7 +116,7 @@ const AddProduct = () => {
 
                 </div>
 
-                <input type="submit" value="Add Product" className="btn btn-block" />
+                <input type="submit" value="Add Product" className="btn btn-block hover:bg-red-600" />
             </form>
         </div>
     );

@@ -21,7 +21,7 @@ const NavBar = () => {
     <li className="font-bold text-white"><NavLink to='/'>Home</NavLink></li>
     <li className="font-bold text-white"><NavLink to='/cart'>MyCart</NavLink></li>
     <li className="font-bold text-white"><NavLink to='/addProduct'>AddProduct</NavLink></li>
-    <li className="font-bold text-white"><NavLink to='/product'>Product</NavLink></li>
+    {/* <li className="font-bold text-white"><NavLink to='/product'>Product</NavLink></li> */}
 
     <li className="font-bold text-white"><NavLink to='/login'>Login</NavLink></li>
     <li className="font-bold text-white"><NavLink to='/register'>Register</NavLink></li>

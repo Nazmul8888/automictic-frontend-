@@ -4,7 +4,9 @@ import ProductCard from "../AddProduct/ProductCard";
 
 const Product = () => {
 
+
     const brands = useLoaderData()
+    
     return (
         <div>
             <h1>All Brand: {brands.length}</h1>
